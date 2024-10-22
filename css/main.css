@@ -216,7 +216,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 }
 #about .profile_text {
    display: flex;flex-direction: column;gap: 16px;
-   line-height: 30px;
+   line-height: 33px;
 }
 #about .profile_text strong {font-size: 25px;font-family: 'NanumSquareNeoExtraBold';}
 
