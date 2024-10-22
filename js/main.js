@@ -73,23 +73,31 @@ $(document).ready(function() {
    }
 });
 
-
-
 // skill 안됨
 $(document).ready(function() {
+   let liElements = $('#skill .skill_name li');  // 모든 li 요소들 선택
+   let skillSection = $('#skill').offset().top;  // #skill 섹션 위치
+
+   // 스크롤 이벤트 핸들러
    $(window).on('scroll', function() {
-      let skillSection = $('#skill').offset().top;
       let scrollPosition = $(window).scrollTop();
       let windowHeight = $(window).height();
 
-      // 스크롤이 #skill 섹션에 도달하면 애니메이션 실행
+      // 스크롤이 #skill 섹션에 도달하면 li 하나씩 순차적으로 나타나게 함
       if (scrollPosition + windowHeight > skillSection + 100) {
-         $('#skill .skill_name').addClass('active');
-      } else {
-         $('#skill .skill_name').removeClass('active');
+         liElements.each(function(index) {
+            $(this).delay(index * 200).queue(function(next) {
+               $(this).css({
+                  'opacity': '1',
+                  'transform': 'translateX(0)'  // 원래 위치로 이동
+               });
+               next();
+            });
+         });
       }
    });
 });
+
 
 // webProject
 $(document).ready(function() {
@@ -115,7 +123,7 @@ const dsSwiper = new Swiper('.ds_swiper', {
    },
    centeredSlides: true,
    slidesPerView: 3,
-   // spaceBetween: 80,
+   spaceBetween: 20,
    navigation: {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-prev',

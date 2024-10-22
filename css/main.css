@@ -1,5 +1,5 @@
 /* Common */
-/* html {overflow-x: hidden;} */
+html {overflow-x: hidden;}
 html, body {width: 100%; height: 100%;}
 body {
    background: url(../img/background.png);font-family: 'NanumSquareNeoBold';
@@ -247,92 +247,46 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    display: flex;
    justify-content: space-between;
    position: absolute;
-   top: 52%;
+   top: 29%;
    white-space: nowrap;
    overflow: hidden;
    width: 100%;
 }
 
-#skill .skill_name li {
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
+/* #skill .skill_name li {
+   display: flex;flex-direction: column;gap: 35px;
+   justify-content: center;align-items: center;
    margin: 0 315px;
-   /* 양쪽에 315px 간격 */
-   width: 145px;
-   height: 145px;
-   border-radius: 50%;
-   background: #E9BC5A;
-   color: #FFF;
-   text-align: center;
-   flex-shrink: 0;
-   /* 찌그러지지 않도록 설정 */
-   transform: translateX(100%);
-   /* 초기 상태: 화면 밖에 위치 */
+} */
+
+#skill .skill_name li {
+   display: flex;
+   flex-direction: column;
+   gap: 35px;
+   justify-content: center;
+   align-items: center;
+   margin: 0 50px;
    opacity: 0;
-   /* 초기 상태에서 보이지 않음 */
-   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+   /* 처음에는 보이지 않음 */
+   transform: translateX(100px);
+   /* 오른쪽으로 이동한 상태 */
+   transition: opacity 0.5s ease, transform 0.5s ease;
    /* 애니메이션 */
 }
 
-/* li 요소를 순차적으로 슬라이드되도록 nth-child 사용 */
-#skill .skill_name.active li:nth-child(1) {
-   transform: translateX(0);
-   /* 첫 번째 li가 제자리로 슬라이드 */
-   opacity: 1;
-   /* 보이도록 설정 */
-   transition-delay: 0.2s;
-   /* 첫 번째 li에 딜레이 */
+#skill .skill_name p {
+   display: flex;
+   justify-content: center;align-items: center;
+   width: 145px;height: 145px;
+   background: #E9BC5A;border-radius: 50%;
+   color: #FFF;
 }
-
-#skill .skill_name.active li:nth-child(2) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 0.4s;
+#skill .skill_name span {
+   display: flex;justify-content: center;align-items: center;
+   width: 420px;height: 180px;
+   background: #FFF;border-radius: 30px;
+   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
-
-#skill .skill_name.active li:nth-child(3) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 0.6s;
-}
-
-#skill .skill_name.active li:nth-child(4) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 0.8s;
-}
-
-#skill .skill_name.active li:nth-child(5) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 1s;
-}
-
-#skill .skill_name.active li:nth-child(6) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 1.2s;
-}
-
-#skill .skill_name.active li:nth-child(7) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 1.4s;
-}
-
-#skill .skill_name.active li:nth-child(8) {
-   transform: translateX(0);
-   opacity: 1;
-   transition-delay: 1.6s;
-}
-
-/* #skill .skill_name li {
-   display: flex;align-items: center;justify-content: center;
-   margin: 0 315px 0 0;
-   width: 145px;height: 145px;border-radius: 50%;
-   background: #E9BC5A;color: #FFF;text-align: center;
-} */
 
 /* WEB PROJECT */
 #webProject {
@@ -399,7 +353,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    position: absolute;left: 50%;top: 50%;
    transform: translate(-50%, -50%);
    width: 300px;height: 300px;line-height: 36px;
-   font-family: 'BMJUA';font-size: 24px;
+   font-size: 24px;font-family: 'NanumSquareNeoExtraBold';
    opacity: 0;
 }
 #webProject .web_list .list_on strong {
@@ -455,6 +409,52 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    width: 100%;height: 100%;
    object-fit: cover;
 }
+/* #dsProject .ds_swiper {
+   position: relative;
+   overflow: hidden;
+   margin: 0 100px;
+}
+#dsProject .swiper-wrapper {
+   display: flex;
+}
+#dsProject .swiper-wrapper .swiper-slide {
+   overflow: hidden;flex-shrink: 0;
+   width: 430px;height: 430px;
+   background: #CBBBD6;border-radius: 40px;
+}
+#dsProject .swiper-wrapper li img {
+   width: 100%;height: 100%;
+   object-fit: cover;
+}
+#dsProject .swiper-slide-active {
+   scale: 1.2;
+} */
+
+/* .pr_container .pr_swiper {
+   position: relative;
+   overflow: hidden;
+   padding: 50px 0;margin: 0 100px;
+}
+.pr_container .swiper-wrapper {
+   display: flex;
+}
+.pr_container .swiper-wrapper .swiper-slide {
+   overflow: hidden;flex-shrink: 0;
+   color: #FFF;font-weight: 600;text-align: center;
+   border-radius: 30px;
+   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+.product .swiper-slide-active {
+   scale: 1.2;
+}
+.pr_container .swiper-slide a {
+   display: flex;flex-direction: column;justify-content: space-between;
+   height: 100%;
+}
+.pr_container .swiper-slide img {
+   margin-top: 29px;height: 80%;object-fit: cover;
+} */
+
 #dsProject .progress_wrap {
    display: flex;justify-content: space-between;align-items: center;
    position: absolute;top: 57%;left: 50%;
@@ -478,7 +478,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    background: url(../img/contact.png);
 }
 #contact .util {
-   position: absolute;left: 50%;top: 50%;
+   position: absolute;left: 50%;top: 50%;z-index: 99;
    transform: translate(-50%, -50%);text-align: center;
 }
 #contact .util ul {
@@ -497,24 +497,19 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    background: #FFE0B4;
 }
 
-/* @keyframes flow {
-   from {transform: translateX(0);}
-   to {transform: translateX(-100%);}
-}
-.flow_content_wrap {overflow: hidden;height: 100vh;background: red;}
-.flow_content {display: flex;}
-.flow_content img {
-   width: 500px;height: 80px;
-   animation: flow 8s linear infinite;border: 1px solid #000;
-} */
 @keyframes flow {
    from {transform: translateX(0);}
    to {transform: translateX(-100%);}
 }
-.thank_wrap {overflow: hidden;}
-.thank_content {display: flex;}
-.thank_content img {
-
-   animation: flow 15s linear infinite;border: 1px solid #000;
+.thank_wrap {
+   overflow: hidden;
 }
-
+.thank_content {
+   display: flex;gap: 50px;
+   position: absolute;left: 50%;top: 50%;
+   transform: translate(-50%, -50%);height: 300px;width: 100%;
+}
+.thank_content img {
+   animation: flow 15s linear infinite;
+   opacity: 0.5;
+}
