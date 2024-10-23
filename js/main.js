@@ -74,29 +74,29 @@ $(document).ready(function() {
 });
 
 // skill 안됨
-$(document).ready(function() {
-   let liElements = $('#skill .skill_name li');  // 모든 li 요소들 선택
-   let skillSection = $('#skill').offset().top;  // #skill 섹션 위치
+// $(document).ready(function() {
+//    let liElements = $('#skill .skill_name li');  // 모든 li 요소들 선택
+//    let skillSection = $('#skill').offset().top;  // #skill 섹션 위치
 
-   // 스크롤 이벤트 핸들러
-   $(window).on('scroll', function() {
-      let scrollPosition = $(window).scrollTop();
-      let windowHeight = $(window).height();
+//    // 스크롤 이벤트 핸들러
+//    $(window).on('scroll', function() {
+//       let scrollPosition = $(window).scrollTop();
+//       let windowHeight = $(window).height();
 
-      // 스크롤이 #skill 섹션에 도달하면 li 하나씩 순차적으로 나타나게 함
-      if (scrollPosition + windowHeight > skillSection + 100) {
-         liElements.each(function(index) {
-            $(this).delay(index * 200).queue(function(next) {
-               $(this).css({
-                  'opacity': '1',
-                  'transform': 'translateX(0)'  // 원래 위치로 이동
-               });
-               next();
-            });
-         });
-      }
-   });
-});
+//       // 스크롤이 #skill 섹션에 도달하면 li 하나씩 순차적으로 나타나게 함
+//       if (scrollPosition + windowHeight > skillSection + 100) {
+//          liElements.each(function(index) {
+//             $(this).delay(index * 200).queue(function(next) {
+//                $(this).css({
+//                   'opacity': '1',
+//                   'transform': 'translateX(0)'  // 원래 위치로 이동
+//                });
+//                next();
+//             });
+//          });
+//       }
+//    });
+// });
 
 
 // webProject
@@ -128,4 +128,23 @@ const dsSwiper = new Swiper('.ds_swiper', {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-prev',
    },
-})
+});
+
+// 스크롤트리거
+$(document).ready(function() {
+   gsap.registerPlugin(ScrollTrigger);
+
+   // #skill 섹션의 li 요소에 대한 애니메이션 설정
+   gsap.from("#skill .skill_name li", {
+      x: 200,  // 가로로 200px만큼 오른쪽에서 시작
+      opacity: 0,  // 시작할 때 투명하게
+      stagger: 0.2,  // 각 요소가 0.2초 간격으로 순차적으로 나타남
+      duration: 1,  // 각 애니메이션의 지속 시간
+      ease: "power2.out",  // 부드러운 애니메이션
+      scrollTrigger: {
+         trigger: "#skill",  // #skill 섹션이 트리거될 때 애니메이션 실행
+         start: "top 80%",  // 화면의 80% 지점에 도달하면 애니메이션 시작
+         toggleActions: "play none none none",  // 한 번만 재생
+      }
+   });
+});

@@ -17,6 +17,9 @@ body {
    background-image: url(../img/cursor1.png);
    object-fit: cover;
 } */
+::selection {
+   background-color: #fffc68;
+}
 button {cursor: pointer;}
 
 h2 {
@@ -266,11 +269,11 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    justify-content: center;
    align-items: center;
    margin: 0 50px;
-   opacity: 0;
+   /* opacity: 0; */
    /* 처음에는 보이지 않음 */
-   transform: translateX(100px);
+   /* transform: translateX(100px); */
    /* 오른쪽으로 이동한 상태 */
-   transition: opacity 0.5s ease, transform 0.5s ease;
+   /* transition: opacity 0.5s ease, transform 0.5s ease; */
    /* 애니메이션 */
 }
 
