@@ -175,7 +175,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #about {
    position: relative;
    font-size: 20px;
-   background-color: #F0ECE7;
+   background-color: #F4ECE3;
 }
 #about .ab_bg.animate { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
    position: relative;
