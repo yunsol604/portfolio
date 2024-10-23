@@ -75,6 +75,11 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    }
 }
 
+.title div {
+   animation: none;
+   /* 기본적으로 애니메이션이 없음 */
+}
+
 /* onePage */
 #onePage {
    position: relative;
@@ -82,7 +87,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #onePage h2 {
    /* position: absolute;left: 35px;top: 26px; */
 }
-#onePage .title .pf_bg {
+#onePage .title .pf_bg.animate {
    position: relative;
    /* width: 500px; */
    animation: onePageWidth 2s forwards;
@@ -172,7 +177,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    font-size: 20px;
    background-color: #F0ECE7;
 }
-#about .ab_bg { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
+#about .ab_bg.animate { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
    position: relative;
    animation: aboutWidth 2s forwards;
    height: 45px;
@@ -230,7 +235,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    font-size: 20px;
    background-color: #F2F0E6;
 }
-#skill .sk_bg { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
+#skill .sk_bg.animate { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
    position: relative;
    animation: skillWidth 2s forwards;
    height: 45px;
@@ -297,7 +302,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    position: relative;
    background: #E7E9F0;
 }
-#webProject .web_bg {
+#webProject .web_bg.animate {
    position: relative;
    animation: prWidth 2s forwards;
    height: 45px;
@@ -385,7 +390,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    position: relative;
    background: #E7E9F0;
 }
-#dsProject .ds_bg {
+#dsProject .ds_bg.animate {
    position: relative;
    animation: dsWidth 2s forwards;
    height: 45px;
@@ -475,7 +480,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    position: relative;
    background: #FFF;
 }
-#contact .cn_bg {
+#contact .cn_bg.animate {
    position: relative;
    animation: cnWidth 2s forwards;
    height: 45px;

@@ -148,3 +148,27 @@ $(document).ready(function() {
       }
    });
 });
+
+$(document).ready(function() {
+   gsap.registerPlugin(ScrollTrigger);
+
+   // 각 섹션에 대해 ScrollTrigger 설정
+   $('.section').each(function() {
+      let titleDiv = $(this).find('.title div');  // .title 안의 div 요소 선택
+
+      // ScrollTrigger를 사용하여 각 섹션의 title div에 애니메이션 적용
+      ScrollTrigger.create({
+         trigger: $(this),  // 각 섹션이 트리거될 때
+         start: "top 80%",  // 섹션의 상단이 화면의 80% 지점에 도달하면 시작
+         onEnter: () => {
+            // 애니메이션 실행을 위해 클래스 추가
+            titleDiv.addClass('animate');  // 'animate' 클래스 추가
+         },
+         onLeaveBack: () => {
+            // 뒤로 스크롤할 때 애니메이션 다시 실행하려면 클래스 제거
+            titleDiv.removeClass('animate');
+         },
+         toggleActions: "play none none reset",  // 한 번만 실행 후 스크롤 다시 올라오면 애니메이션 재실행
+      });
+   });
+});
