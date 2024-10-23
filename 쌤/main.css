@@ -90,7 +90,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #onePage .title .pf_bg.animate {
    position: relative;
    /* width: 500px; */
-   animation: onePageWidth 1s forwards;
+   animation: onePageWidth 2s forwards;
    height: 45px;
    /* background: #B6D8FF; */
    background-image: url(../img/1.png);
@@ -179,7 +179,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 }
 #about .ab_bg.animate { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
    position: relative;
-   animation: aboutWidth 1s forwards;
+   animation: aboutWidth 2s forwards;
    height: 45px;
    background: url(../img/about.png);
 }
@@ -230,14 +230,14 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 
 /* SKILL */
 #skill {
-   /* overflow: hidden; */
+   overflow: hidden;
    position: relative;
    font-size: 20px;
    background-color: #F2F0E6;
 }
 #skill .sk_bg.animate { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
    position: relative;
-   animation: skillWidth 1s forwards;
+   animation: skillWidth 2s forwards;
    height: 45px;
    background: url(../img/skill.png);;
 }
@@ -252,22 +252,6 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 } */
 
 #skill .skill_name ul {
-   display: flex; /* li 요소들을 가로로 나란히 정렬 */
-   white-space: nowrap; /* 줄바꿈 방지 */
-   overflow: visible; /* 잘려 보이는 문제 방지 */
-   position: absolute;top: 29%;
-   width: auto; /* 슬라이더 전체 너비를 유동적으로 설정 */
-}
-
-#skill .skill_name li {
-   display: flex;flex-direction: column;gap: 35px;
-   justify-content: center;align-items: center;
-   flex: 0 0 auto; /* li 요소들이 한 줄에 나란히 배치되도록 설정 */
-   margin: 0 50px;
-   width: 600px;
-}
-/*
-#skill .skill_name ul {
    display: flex;
    justify-content: space-between;
    position: absolute;
@@ -276,6 +260,13 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    overflow: hidden;
    width: 100%;
 }
+
+/* #skill .skill_name li {
+   display: flex;flex-direction: column;gap: 35px;
+   justify-content: center;align-items: center;
+   margin: 0 315px;
+} */
+
 #skill .skill_name li {
    display: flex;
    flex-direction: column;
@@ -283,7 +274,13 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    justify-content: center;
    align-items: center;
    margin: 0 50px;
-} */
+   /* opacity: 0; */
+   /* 처음에는 보이지 않음 */
+   /* transform: translateX(100px); */
+   /* 오른쪽으로 이동한 상태 */
+   /* transition: opacity 0.5s ease, transform 0.5s ease; */
+   /* 애니메이션 */
+}
 
 #skill .skill_name p {
    display: flex;
@@ -307,7 +304,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 }
 #webProject .web_bg.animate {
    position: relative;
-   animation: prWidth 1s forwards;
+   animation: prWidth 2s forwards;
    height: 45px;
    background: url(../img/web.png);
 }
@@ -394,15 +391,19 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    background: #E7E9F0;
    display: flex;flex-direction: column;
    justify-content: center;
+   border: 1px solid red;
 }
 #dsProject .ds_bg.animate {
    position: relative;
-   animation: dsWidth 1s forwards;
+   animation: dsWidth 2s forwards;
    height: 45px;
    background: url(../img/design.png);
 }
-.ds_content {margin-top: 120px;}
+.ds_content {border: 1px solid orange;
+   margin-top: 120px;
+}
 #dsProject .ds_swiper {
+
    /* display: flex;align-items: center;justify-content: center;
    gap: 60px;
    position: absolute;left: 50%;top: 57%;
@@ -421,21 +422,12 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    /* flex-shrink: 0;*/
    width: 430px;
    height: 430px;
-   border-radius: 40px;
+   border: 1px solid #000;
+   background: #CBBBD6;border-radius: 40px;
 }
 #dsProject .swiper-wrapper li img {
    width: 100%;height: 100%;
    object-fit: cover;
-}
-#dsProject .swiper-wrapper a::before {
-   content: "";display: block;
-   position: absolute;
-   width: 100%;height: 100%;
-   background: rgba(0, 0, 0, 0.2);
-   transition: all 0.3s;
-}
-#dsProject .swiper-slide-active a::before {
-   background: rgba(0, 0, 0, 0);
 }
 /* #dsProject .ds_swiper {
    position: relative;
@@ -504,7 +496,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 }
 #contact .cn_bg.animate {
    position: relative;
-   animation: cnWidth 1s forwards;
+   animation: cnWidth 2s forwards;
    height: 45px;
    background: url(../img/contact.png);
 }
