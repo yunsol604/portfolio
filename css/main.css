@@ -206,7 +206,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    align-items: flex-start;gap: 30px;
    padding-left: 130px;
    height: 390px;
-   border-left: 1px solid #403522;
+   border-left: 1px solid #bdb9b2;
 }
 #about .profile_img {
    overflow: hidden;margin-right: 130px;
@@ -422,8 +422,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #dsProject .swiper-wrapper li {
    overflow: hidden;
    /* flex-shrink: 0;*/
-   width: 430px;
-   height: 430px;
+   width: 430px;height: 430px;
+   border: 3px solid #FFF;
    border-radius: 40px;
 }
 #dsProject .swiper-wrapper li img {
