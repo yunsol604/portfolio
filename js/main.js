@@ -145,7 +145,7 @@ const dsSwiper = new Swiper('.ds_swiper', {
    //    disableOnInteraction: false,
    // },
    centeredSlides: true,
-   loop: true,
+   // loop: true,
    loopedSlides: 1,
    slidesPerView: 3,
    spaceBetween: 60,
@@ -153,7 +153,7 @@ const dsSwiper = new Swiper('.ds_swiper', {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-prev',
    },
-   autoplay: true,
+   // autoplay: true,
 });
 
 

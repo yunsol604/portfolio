@@ -431,58 +431,12 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    content: "";display: block;
    position: absolute;
    width: 100%;height: 100%;
-   background: rgba(0, 0, 0, 0.2);
+   background: rgba(0, 0, 0, 0.3);
    transition: all 0.3s;
 }
 #dsProject .swiper-slide-active a::before {
    background: rgba(0, 0, 0, 0);
 }
-/* #dsProject .ds_swiper {
-   position: relative;
-   overflow: hidden;
-   margin: 0 100px;
-}
-#dsProject .swiper-wrapper {
-   display: flex;
-}
-#dsProject .swiper-wrapper .swiper-slide {
-   overflow: hidden;flex-shrink: 0;
-   width: 430px;height: 430px;
-   background: #CBBBD6;border-radius: 40px;
-}
-#dsProject .swiper-wrapper li img {
-   width: 100%;height: 100%;
-   object-fit: cover;
-}
-#dsProject .swiper-slide-active {
-   scale: 1.2;
-} */
-
-/* .pr_container .pr_swiper {
-   position: relative;
-   overflow: hidden;
-   padding: 50px 0;margin: 0 100px;
-}
-.pr_container .swiper-wrapper {
-   display: flex;
-}
-.pr_container .swiper-wrapper .swiper-slide {
-   overflow: hidden;flex-shrink: 0;
-   color: #FFF;font-weight: 600;text-align: center;
-   border-radius: 30px;
-   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-}
-.product .swiper-slide-active {
-   scale: 1.2;
-}
-.pr_container .swiper-slide a {
-   display: flex;flex-direction: column;justify-content: space-between;
-   height: 100%;
-}
-.pr_container .swiper-slide img {
-   margin-top: 29px;height: 80%;object-fit: cover;
-} */
-
 #dsProject .progress_wrap {
    display: flex;justify-content: space-between;align-items: center;
    position: absolute;top: 57%;left: 50%;
@@ -495,6 +449,17 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #dsProject .progress_wrap i {
    font-size: 60px;color: #AAA;
    background: #FFF;border-radius: 50%;
+}
+#dsProject .ds_text {
+   display: flex;flex-direction: column;gap: 20px;
+   justify-content: center;align-items: center;
+   position: absolute;left: 50%;top: 50%;
+   transform: translate(-50%, -50%);
+   width: 500px;
+   color: #FFF;text-shadow: 0px 0px 10px #333;
+}
+#dsProject .ds_text strong {
+   font-size: 40px;font-family: 'NanumSquareNeoExtraBold';
 }
 
 /* CONTACT */
