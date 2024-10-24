@@ -321,22 +321,19 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    width: 430px;height: 430px;
    transform: translateY(-10%);
    background: #CBBBD6;border-radius: 40px;
+   border: 5px solid #FFF;
    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
    transition: all 0.3s;
 }
-/* webProject li 초기 상태 설정 */
 #webProject .web_list li {
    opacity: 0;
    transform: translateY(100%);
-   /* 아래에서 대기 */
    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 
-/* active 클래스가 추가되면 슬라이드되며 나타남 */
 #webProject .web_list.active li {
    opacity: 1;
    transform: translateY(0);
-   /* 위로 이동하여 중앙으로 */
 }
 
 #webProject .web_list li:nth-child(odd) {
@@ -349,7 +346,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #webProject .web_list p {
    position: absolute;left: 50%;top: 50%;
    transform: translate(-50%, -50%);
-   font-family: 'NanumSquareNeoExtraBold';font-size: 29px;
+   font-family: 'Cafe24ClassicType-Regular';
+   font-size: 29px;
    color: #FFF;text-shadow: 0px 0px 10px #333;
 }
 #webProject .web_list li::before {
@@ -365,7 +363,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    position: absolute;left: 50%;top: 50%;
    transform: translate(-50%, -50%);
    width: 300px;height: 300px;line-height: 36px;
-   font-size: 24px;font-family: 'NanumSquareNeoExtraBold';
+   font-size: 24px;
+   font-family: 'NanumSquareNeoExtraBold';
    opacity: 0;
 }
 #webProject .web_list .list_on strong {
@@ -378,7 +377,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #webProject .web_list .list_btn button {
    padding: 12px 24px;
    background: #9A9CC2;border-radius: 15px;
-   color: #FFF;font-family: 'NanumSquareNeoExtraBold';
+   color: #FFF;
+   /* font-family: 'NanumSquareNeoExtraBold'; */
    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 #webProject .web_list li:hover {transform: translateY(10%);}
