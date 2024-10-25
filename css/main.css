@@ -404,21 +404,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    height: 45px;
    background: url(../img/design.png);
 }
-.ds_content {margin-top: 120px;}
-#dsProject .ds_swiper {
-   /* display: flex;align-items: center;justify-content: center;
-   gap: 60px;
-   position: absolute;left: 50%;top: 57%;
-   transform: translate(-50%, -50%); */
-}
-#dsProject .swiper-wrapper {
-   /* gap: 60px; */
-   /* display: flex;align-items: center;justify-content: center;
-
-   position: absolute;left: 50%;top: 57%;
-   transform: translate(-50%, -50%);
-   background: gold; */
-}
+#dsProject .ds_content {margin-top: 120px;}
 #dsProject .swiper-wrapper li {
    overflow: hidden;
    /* flex-shrink: 0;*/
@@ -440,6 +426,17 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #dsProject .swiper-slide-active a::before {
    background: rgba(0, 0, 0, 0);
 }
+#dsProject .ds_text {
+   display: flex;flex-direction: column;gap: 20px;
+   justify-content: center;align-items: center;
+   position: absolute;left: 50%;top: 50%;
+   transform: translate(-50%, -50%);
+   width: 500px;
+   color: #FFF;text-shadow: 0px 0px 10px #333;
+}
+#dsProject .ds_text strong {
+   font-size: 40px;font-family: 'NanumSquareNeoExtraBold';
+}
 #dsProject .progress_wrap {
    display: flex;justify-content: space-between;align-items: center;
    position: absolute;top: 57%;left: 50%;
@@ -453,16 +450,22 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    font-size: 60px;color: #AAA;
    background: #FFF;border-radius: 50%;
 }
-#dsProject .ds_text {
-   display: flex;flex-direction: column;gap: 20px;
-   justify-content: center;align-items: center;
-   position: absolute;left: 50%;top: 50%;
-   transform: translate(-50%, -50%);
-   width: 500px;
-   color: #FFF;text-shadow: 0px 0px 10px #333;
+#dsProject .swiper-controls-wrap {
+
 }
-#dsProject .ds_text strong {
-   font-size: 40px;font-family: 'NanumSquareNeoExtraBold';
+#dsProject .swiper-pagination {
+   display: flex;gap: 8px;
+   align-items: center;justify-content: center;
+   position: absolute;left: 50%;bottom: 12%;
+   transform: translateX(-50%);
+}
+.swiper-pagination span {
+   width: 12px;height: 12px;
+   background: #ced0d8;opacity: 1;
+}
+.swiper-pagination .swiper-pagination-bullet {}
+.swiper-pagination .swiper-pagination-bullet-active {
+   background: #B0B2C0;width: 14px;height: 14px;
 }
 
 /* CONTACT */

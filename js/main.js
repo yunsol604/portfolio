@@ -67,8 +67,9 @@ $(window).on('scroll', function() {
 
 // ** dsProject 스와이퍼
 const dsSwiper = new Swiper('.ds_swiper', {
-   centeredSlides: true,
    loop: true,
+   autoplay: true,
+   centeredSlides: true,
    loopedSlides: 1,
    slidesPerView: 3,
    spaceBetween: 60,
@@ -76,7 +77,10 @@ const dsSwiper = new Swiper('.ds_swiper', {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-prev',
    },
-   autoplay: true,
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+   }
 });
 
 // ** skill 스크롤 트리거
