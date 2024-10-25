@@ -99,10 +99,11 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #onePage .pf_name .name_bg {
    position: relative;
    width: 530px;
-   /* animation: onePageWidth2 2s 2s forwards; */
    height: 45px;
    background: url(../img/name.png);
 }
+/* #onePage에서 main_header 숨기기 */
+#onePage .main_header {display: none;}
 #onePage .ul_bg {
    position: absolute;left: 7%;top: 35%;
    width: 1500px;height: 500px;
@@ -122,36 +123,20 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    background: #EBEBD0;
    border-radius: 50%;
    box-shadow: -12px 0px 0px #E1E1C2;
-   font-size: 36px;transition: all 0.3s;
-}
-
-/* 기본 상태: li가 작게 시작 */
-#onePage #gnb li {
-   transform: scale(0);
-   /* 시작 시 크기 0 */
-   opacity: 0;
-   /* 시작 시 투명 */
+   font-size: 36px;
+   transform: scale(0); /* 시작 시 크기 0 */
+   opacity: 0; /* 시작 시 투명 */
    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-/* active 클래스가 추가되면 크기와 투명도 조절 */
 #onePage #gnb li.active {
-   transform: scale(1);
-   /* 크기가 100%로 커짐 */
-   opacity: 1;
-   /* 투명도가 100% */
+   transform: scale(1); /* 크기가 100%로 커짐 */
+   opacity: 1; /* 투명도 100% */
 }
-
-/* #onePage에서 main_header 숨기기 */
-#onePage .main_header {
-   display: none;
-}
-
+#onePage #gnb li {transition: all 0.3s;}
 #onePage #gnb li:nth-child(1):hover {background: #B6D8FF;}
 #onePage #gnb li:nth-child(2):hover {background: #FFD2D3;}
 #onePage #gnb li:nth-child(3):hover {background: #FFE1A1;}
 #onePage #gnb li:nth-child(4):hover {background: #CBBBD6;}
-
 #onePage .one_under {
    display: flex;align-items: flex-end;gap: 20px;
    position: absolute;left: 6%;bottom: 9%;
@@ -161,12 +146,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    display: flex;flex-direction: column;gap: 12px;
    font-family: 'NanumSquareNeoExtraBold';
 }
-#onePage .contact_left strong {
-   font-size: 25px;
-}
-#onePage .contact_left p {
-
-}
+#onePage .contact_left strong {font-size: 25px;}
 #onePage .contact_right {
    display: flex;flex-direction: column;gap: 12px;
 }
@@ -191,7 +171,6 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    background-size: contain;
    animation: Rotate 5s infinite;
 }
-
 #about .profile_box {
    display: flex;align-items: center;justify-content: center;
    position: absolute;left: 50%;top: 57%;
@@ -213,12 +192,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    width: 310px;height: 390px;border-radius: 40px;
    border: 3px solid #e2ded8;
 }
-#about .profile_img img {
-   object-fit: cover;
-}
-#about .profile_notice {
-   display: flex;gap: 40px;
-}
+#about .profile_img img {object-fit: cover;}
+#about .profile_notice {display: flex;gap: 40px;}
 #about .profile_left, .profile_right {
    display: flex;flex-direction: column;gap: 14px;
 }
@@ -230,7 +205,6 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 
 /* SKILL */
 #skill {
-   /* overflow: hidden; */
    position: relative;
    font-size: 20px;
    background-color: #F2F0E6;
@@ -246,19 +220,12 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    width: 100%;height: 1px;
    border: 1px dashed #403522;
 }
-/* #skill .skill_name ul {
-   display: flex;justify-content: space-between;
-   position: absolute;top: 52%;
-} */
-
 #skill .skill_name ul {
-   display: flex; /* li 요소들을 가로로 나란히 정렬 */
+   display: flex;
    white-space: nowrap; /* 줄바꿈 방지 */
-   overflow: visible; /* 잘려 보이는 문제 방지 */
    position: absolute;top: 29%;
    width: auto; /* 슬라이더 전체 너비를 유동적으로 설정 */
 }
-
 #skill .skill_name li {
    display: flex;flex-direction: column;gap: 35px;
    justify-content: center;align-items: center;
@@ -266,25 +233,6 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    margin: 0 50px;
    width: 600px;
 }
-/*
-#skill .skill_name ul {
-   display: flex;
-   justify-content: space-between;
-   position: absolute;
-   top: 29%;
-   white-space: nowrap;
-   overflow: hidden;
-   width: 100%;
-}
-#skill .skill_name li {
-   display: flex;
-   flex-direction: column;
-   gap: 35px;
-   justify-content: center;
-   align-items: center;
-   margin: 0 50px;
-} */
-
 #skill .skill_name p {
    display: flex;
    justify-content: center;align-items: center;
@@ -330,12 +278,10 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    transform: translateY(100%);
    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
-
 #webProject .web_list.active li {
    opacity: 1;
    transform: translateY(0);
 }
-
 #webProject .web_list li:nth-child(odd) {
    transform: translateY(12%);
 }
@@ -386,9 +332,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #webProject .web_list li:hover::before {
    background: #CFD1ED;
 }
-#webProject .web_list li:hover p {
-   display: none;
-}
+#webProject .web_list li:hover p {display: none;}
 #webProject .web_list li:hover .list_on {opacity: 1;}
 
 /* DESIGN PROJECT */
@@ -450,9 +394,6 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    font-size: 60px;color: #AAA;
    background: #FFF;border-radius: 50%;
 }
-#dsProject .swiper-controls-wrap {
-
-}
 #dsProject .swiper-pagination {
    display: flex;gap: 8px;
    align-items: center;justify-content: center;
@@ -463,9 +404,9 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    width: 12px;height: 12px;
    background: #ced0d8;opacity: 1;
 }
-.swiper-pagination .swiper-pagination-bullet {}
 .swiper-pagination .swiper-pagination-bullet-active {
-   background: #B0B2C0;width: 14px;height: 14px;
+   width: 14px;height: 14px;
+   background: #B0B2C0;
 }
 
 /* CONTACT */
@@ -507,11 +448,12 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    overflow: hidden;
 }
 .thank_content {
-   display: flex;gap: 50px;
+   display: flex;
    position: absolute;left: 50%;top: 50%;
    transform: translate(-50%, -50%);height: 300px;width: 100%;
 }
 .thank_content img {
+   padding-right: 50px;
    animation: flow 15s linear infinite;
    opacity: 0.5;
 }
