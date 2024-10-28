@@ -47,7 +47,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 /* goTop 버튼 */
 .btn_goTop {
    display: flex;align-items: center;justify-content: center;
-   position: fixed;right: 50px;bottom: 50px;z-index: 9999;
+   position: fixed;right: 50px;bottom: 50px;z-index: 999;
    width: 79px;height: 79px;
    background: #F9B8B9;border-radius: 50%;color: #FFF;
    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -365,11 +365,18 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #dsProject .popup {
    display: none;
    position: fixed;left: 0;right: 0;top: 0;
-   background: #000;z-index: 9999;height: 100%;
+   z-index: 9999;height: 100%;
    text-align: center;overflow: auto;
 }
 #dsProject .popup img {
    margin: auto;
+}
+#dsProject .popup button {
+   position: fixed;right: 3%;top: 5%;
+   width: 80px;height: 80px;
+   background: #050505;border-radius: 50%;color: #FFF;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   font-size: 50px;text-align: center;
 }
 
 #dsProject .swiper-wrapper a::before {
@@ -403,7 +410,6 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #dsProject .progress_wrap>div {
    /* cursor: pointer; */
    position: absolute;top: -245px;
-
 }
 #dsProject .progress_wrap>div:first-child {left: 0;}
 #dsProject .progress_wrap>div:last-child {right: 0;}

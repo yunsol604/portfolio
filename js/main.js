@@ -100,7 +100,7 @@ const dsSwiper = new Swiper('.ds_swiper', {
 $('.ds_swiper li a').click(function(e) {
    e.preventDefault();
    const imgName = $(this).parent().attr('id')
-   $('#dsProject .popup img').attr('src',`./img/${imgName}.jpg`)
+   $('#dsProject .popup img').attr('src',`./img/design/${imgName}.png`)
    $('#dsProject .popup').show()
    $('html').css({'overflow': 'hidden'})
 })
