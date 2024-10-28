@@ -155,7 +155,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 #about {
    position: relative;
    font-size: 20px;
-   background-color: #F4ECE3;
+   background-color: #F2F0E6;
+   /* background-color: #F4ECE3; */
 }
 #about .ab_bg.animate { /* 스크롤 내리고 화면 나올 때 실행 돼야 함 */
    position: relative;
@@ -353,13 +354,24 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    overflow: hidden;
    /* flex-shrink: 0;*/
    width: 430px;height: 430px;
-   border: 3px solid #FFF;
+   border: 5px solid #FFF;
    border-radius: 40px;
 }
 #dsProject .swiper-wrapper li img {
    width: 100%;height: 100%;
    object-fit: cover;
 }
+
+#dsProject .popup {
+   display: none;
+   position: fixed;left: 0;right: 0;top: 0;
+   background: #000;z-index: 9999;height: 100%;
+   text-align: center;overflow: auto;
+}
+#dsProject .popup img {
+   margin: auto;
+}
+
 #dsProject .swiper-wrapper a::before {
    content: "";display: block;
    position: absolute;
@@ -376,7 +388,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    position: absolute;left: 50%;top: 50%;
    transform: translate(-50%, -50%);
    width: 500px;
-   color: #FFF;text-shadow: 0px 0px 10px #333;
+   color: #FFF;text-shadow: 0px 0px 5px #333;
 }
 #dsProject .ds_text strong {
    font-size: 40px;font-family: 'NanumSquareNeoExtraBold';
@@ -412,7 +424,7 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 /* CONTACT */
 #contact {
    position: relative;
-   background: #FFF;
+   background: #E7E9F0;
 }
 #contact .cn_bg.animate {
    position: relative;
@@ -455,5 +467,5 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 .thank_content img {
    padding-right: 50px;
    animation: flow 15s linear infinite;
-   opacity: 0.5;
+   opacity: 0.6;
 }

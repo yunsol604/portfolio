@@ -51,6 +51,20 @@ $('#gnb li').each(function(index) {
    });
 });
 
+// ** skill 스크롤 트리거
+gsap.to('#slider', {
+   x: () => -($('#slider li').innerWidth() * ($('#slider li').length - 1)),  // 전체 슬라이더를 가로로 이동
+   scrollTrigger: {
+      trigger: '#skill',
+      start: 'top top',
+      end: () => '+=' + ($('#slider li').innerWidth() * $('#slider li').length),  // 각 li의 넓이만큼 스크롤 끝 지점 설정
+      pin: true,
+      scrub: 6,
+      snap: 1 / ($('#slider li').length),
+      markers: false
+   }
+});
+
 // ** webProject가 로드되면 li가 자연스럽게 올라오도록 애니메이션
 $(window).on('scroll', function() {
    let webProjectSection = $('#webProject').offset().top;
@@ -82,20 +96,18 @@ const dsSwiper = new Swiper('.ds_swiper', {
       clickable: true,
    }
 });
-
-// ** skill 스크롤 트리거
-gsap.to('#slider', {
-   x: () => -($('#slider li').innerWidth() * ($('#slider li').length - 1)),  // 전체 슬라이더를 가로로 이동
-   scrollTrigger: {
-      trigger: '#skill',
-      start: 'top top',
-      end: () => '+=' + ($('#slider li').innerWidth() * $('#slider li').length),  // 각 li의 넓이만큼 스크롤 끝 지점 설정
-      pin: true,
-      scrub: 6,
-      snap: 1 / ($('#slider li').length),
-      markers: false
-   }
-});
+//li의 id와 팝업 이미지의 이름을 같게
+$('.ds_swiper li a').click(function(e) {
+   e.preventDefault();
+   const imgName = $(this).parent().attr('id')
+   $('#dsProject .popup img').attr('src',`./img/design/${imgName}.png`)
+   $('#dsProject .popup').show()
+   $('html').css({'overflow': 'hidden'})
+})
+$('#dsProject .popup').click(function() {
+   $(this).hide()
+   $('html').css({'overflow': 'auto'})
+})
 
 
 // ***** 보류
