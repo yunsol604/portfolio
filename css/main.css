@@ -395,13 +395,18 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
 }
 #dsProject .progress_wrap {
    display: flex;justify-content: space-between;align-items: center;
-   position: absolute;top: 57%;left: 50%;
-   transform: translate(-50%, -50%);
-   width: 1040px;z-index: 10;
+   /* position: absolute;left: 50%; */
+   /* top: 57%; */
+   position: relative;z-index: 10;
+   width: 1040px;margin: auto;
 }
 #dsProject .progress_wrap>div {
    /* cursor: pointer; */
+   position: absolute;top: -245px;
+
 }
+#dsProject .progress_wrap>div:first-child {left: 0;}
+#dsProject .progress_wrap>div:last-child {right: 0;}
 #dsProject .progress_wrap i {
    font-size: 60px;color: #AAA;
    background: #FFF;border-radius: 50%;
