@@ -378,6 +378,8 @@ nav {font-family: 'Cafe24ClassicType-Regular';}
    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
    font-size: 50px;text-align: center;
 }
+.popup.g2 {background: #E7E9F0;}
+.popup.g2 img {height: 100vh;}
 
 #dsProject .swiper-wrapper a::before {
    content: "";display: block;

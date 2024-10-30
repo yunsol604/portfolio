@@ -97,11 +97,24 @@ const dsSwiper = new Swiper('.ds_swiper', {
    }
 });
 //li의 id와 팝업 이미지의 이름을 같게
+// $('.ds_swiper li a').click(function(e) {
+//    e.preventDefault();
+//    const imgName = $(this).parent().attr('id')
+//    $('#dsProject .popup img').attr('src',`./img/design/${imgName}.png`)
+//    $('#dsProject .popup').show()
+//    $('html').css({'overflow': 'hidden'})
+// })
+// $('#dsProject .popup').click(function() {
+//    $(this).hide()
+//    $('html').css({'overflow-y': 'auto'})
+// })
+
+// li id와 .popup id가 동일한 이미지가 보이게
 $('.ds_swiper li a').click(function(e) {
    e.preventDefault();
    const imgName = $(this).parent().attr('id')
-   $('#dsProject .popup img').attr('src',`./img/design/${imgName}.png`)
-   $('#dsProject .popup').show()
+   $('#dsProject .popup').hide()
+   $(`#dsProject .popup.${imgName}`).show()
    $('html').css({'overflow': 'hidden'})
 })
 $('#dsProject .popup').click(function() {
