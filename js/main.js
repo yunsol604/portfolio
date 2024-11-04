@@ -52,7 +52,7 @@ $('#gnb li').each(function(index) {
 
 // ** btn_goTop (맨위로 이동)
 $('.btn_goTop').click(function(e) {
-   e.preventDefault(); // 기본 동작 방지
+   e.preventDefault();
    $('html, body').animate({ scrollTop: 0 }, 1000);
 });
 
