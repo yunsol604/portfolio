@@ -21,7 +21,6 @@ $(window).on('wheel', function(e) {
    e.preventDefault();
 }, {passive: false});
 
-
 const vw = $(window).width(); // 윈도우 너비 변수
 $('.section').each(function() {
    $(this).css('width', vw); // 윈도우 가로 스크롤 생김 현상 제거
@@ -49,6 +48,12 @@ $('#gnb li').each(function(index) {
       $(this).addClass('active');
       next();
    });
+});
+
+// ** btn_goTop (맨위로 이동)
+$('.btn_goTop').click(function(e) {
+   e.preventDefault(); // 기본 동작 방지
+   $('html, body').animate({ scrollTop: 0 }, 1000);
 });
 
 // ** skill 스크롤 트리거
@@ -157,5 +162,3 @@ $('#dsProject .popup').click(function() {
 
 //    $("html").animate({scrollTop : posTop});
 // });
-
-
