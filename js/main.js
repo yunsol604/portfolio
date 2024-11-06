@@ -37,7 +37,7 @@ $('.section').each(function() {
       onLeaveBack: () => {
          titleDiv.removeClass('animate');
       },
-      toggleActions: "play none none reset",
+      refreshPriority: -1, //우선순위를 낮춰서 #skill의 트리거 이후 실행되도록 설정
    });
 });
 
@@ -64,9 +64,11 @@ gsap.to('#slider', {
       start: 'top top',
       end: () => '+=' + ($('#slider li').innerWidth() * $('#slider li').length),  // 각 li의 넓이만큼 스크롤 끝 지점 설정
       pin: true,
+      pinSpacing: true, //
       scrub: 6,
       snap: 1 / ($('#slider li').length),
-      markers: false
+      markers: false,
+      refreshPriority: 1 //우선순위를 높여서 이후 트리거와의 간섭 최소화
    }
 });
 
